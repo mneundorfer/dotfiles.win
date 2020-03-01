@@ -6,6 +6,9 @@ function ... { Set-Location ..\.. }
 function .... { Set-Location ..\..\.. }
 function ..... { Set-Location ..\..\..\.. }
 
+function dp { docker ps }
+function de { docker exec -it }
+
 New-Alias grep findstr
 
 function Test-Admin {
