@@ -12,16 +12,11 @@ function Set-DotfileLink() {
     process {
         $Tools | ForEach-Object {
             $name = $_.Replace("\", "").Replace(".", "");
-            "hello $name"
             Get-ChildItem -Recurse $_ | ForEach-Object {
                 # Attention: We are shadowing the outer $_ here...
                 if (-Not ($_ -is [System.IO.DirectoryInfo])) {
                     $targetPath = $RootPath + $_.FullName.Replace($PSScriptRoot, "").Remove(0, $name.Length + 1);
                     "Found file $_.FullName. Linking to $targetPath ..."
-                    # if (!(Test-Path $targetPath)) {
-                    #     "Target path does not exist, creating..."
-                    #     New-Item -Force $targetPath
-                    # }
                     New-Item -Force -Path $targetPath -ItemType SymbolicLink -Value $_.FullName
                 }
             }

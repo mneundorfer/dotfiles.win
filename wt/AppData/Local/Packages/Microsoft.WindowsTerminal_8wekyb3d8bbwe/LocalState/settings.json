@@ -27,7 +27,8 @@
     {
         "defaults":
         {
-            // Put settings here that you want to apply to all profiles.
+            "useAcrylic": true,
+            "acrylicOpacity": 0.4
         },
         "list":
         [
@@ -35,6 +36,7 @@
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
+                "colorScheme": "One Half Dark",
                 "fontFace": "Cascadia Code PL",
                 "source": "Windows.Terminal.PowershellCore"
             },
@@ -43,6 +45,7 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
+                "colorScheme": "One Half Dark",
                 "fontFace": "Cascadia Code PL",
                 "hidden": false
             },

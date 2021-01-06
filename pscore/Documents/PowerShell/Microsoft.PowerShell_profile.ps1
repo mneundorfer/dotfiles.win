@@ -1,5 +1,6 @@
 # https://stackoverflow.com/a/37715242/1110628
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 function .. { Set-Location .. }
 function ... { Set-Location ..\.. }
