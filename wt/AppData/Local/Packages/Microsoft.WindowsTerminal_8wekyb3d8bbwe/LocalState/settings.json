@@ -28,7 +28,7 @@
         "defaults":
         {
             "useAcrylic": true,
-            "acrylicOpacity": 0.4
+            "acrylicOpacity": 0.9
         },
         "list":
         [
@@ -104,6 +104,16 @@
         // To learn more about panes, visit https://aka.ms/terminal-panes
         { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+alt+d" },
         { "command": { "action": "splitPane", "split": "vertical" }, "keys": "ctrl+alt+right" },
-        { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "ctrl+alt+down" }
+        { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "ctrl+alt+down" },
+
+        { "command": { "action": "switchToTab", "index": 0 }, "keys": "alt+1" },
+        { "command": { "action": "switchToTab", "index": 1 }, "keys": "alt+2" },
+        { "command": { "action": "switchToTab", "index": 2 }, "keys": "alt+3" },
+        { "command": { "action": "switchToTab", "index": 3 }, "keys": "alt+4" },
+        { "command": { "action": "switchToTab", "index": 4 }, "keys": "alt+5" },
+        { "command": { "action": "switchToTab", "index": 5 }, "keys": "alt+6" },
+        { "command": { "action": "switchToTab", "index": 6 }, "keys": "alt+7" },
+        { "command": { "action": "switchToTab", "index": 7 }, "keys": "alt+8" },
+        { "command": { "action": "switchToTab", "index": 8 }, "keys": "alt+9" }
     ]
 }

@@ -10,6 +10,17 @@ function ..... { Set-Location ..\..\..\.. }
 function dp { docker ps }
 function de { docker exec -it }
 
+function ssh_copy_id { 
+    param (
+        [Parameter]
+        $Key="id_rsa",
+        [Parameter(Mandatory)]
+        $TargetHost
+    )
+    
+    Get-Content ~\.ssh\$Key.pub | ssh $TargetHost "cat >> .ssh/authorized_keys"
+}
+
 New-Alias grep findstr
 
 function Test-Admin {
@@ -61,3 +72,6 @@ Import-Module oh-my-posh
 Import-Module PSColor
 
 Set-Theme Robbyrussell
+
+Set-PSReadLineKeyHandler -Key 'Ctrl+u' -Function BackwardDeleteLine
+Set-PSReadLineKeyHandler -Key 'Ctrl+k' -Function ForwardDeleteLine
